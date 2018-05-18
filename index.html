@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>poker yeah?</title>
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit-icons.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+	<script src="card.js"></script>
+	<script src="hand.js"></script>
+	
+	<script src="Poker.js"></script>
+
+	<script src="Generate.js"></script>
+</head>
+<body>
+	<embed src="cards.svg" type="image/svg+xml" style="position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; padding: 0; border: 0; " id="cards"></embed>
+	<div uk-grid>
+		<div class="uk-width-1-6 uk-container" style="background-image: url(wood-pattern-1.jpg); filter: hue-rotate(-18deg) brightness(.6);">
+			<ul uk-accordion="multiple: true">
+			    <li>
+			        <a class="uk-accordion-title" href="#">Clubs</a>
+			        <div id="list-clubs" class="uk-accordion-content">
+			        	
+			        </div>
+			    </li>
+			    <li>
+			        <a class="uk-accordion-title" href="#">Spades</a>
+			        <div id="list-spades" class="uk-accordion-content">
+			        	
+			        </div>
+			    </li>
+			    <li>
+			        <a class="uk-accordion-title" href="#">Diamonds</a>
+			        <div id="list-diamonds" class="uk-accordion-content">
+			        	
+			        </div>
+			    </li>
+			    <li>
+			        <a class="uk-accordion-title" href="#">Hearts</a>
+			        <div id="list-hearts" class="uk-accordion-content">
+			        	
+			        </div>
+			    </li>
+			</ul>
+			<div class="uk-flex-bottom">
+				<form id="add-hand">
+					<input id="hand-label" class="uk-input" placeholder="Label">
+					<button class="uk-button uk-button-primary">Add Hand</button>
+					<button class="uk-button uk-button-second">Evaluate</button>
+
+				</form>
+			</div>
+		</div>
+		<div class="uk-width-5-6 uk-height-viewport" style="background-image: url(green-felt.jpg); filter: brightness(.5);">
+			<div class="uk-flex uk-flex-center" id="current-hand">
+			</div>
+
+			<div class="uk-flex uk-position-bottom uk-flex-left" id="hands">
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
